@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Background */
+body {
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  color: #1c1c1c;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 128px;
+  padding: 18px 8%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2da0a8;
+}
+
+/* LEFT NAV */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-left a:hover {
+  color: #2da0a8;
+}
+
+/* RIGHT NAV */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Buttons */
+.login-btn {
+  background: linear-gradient(to right, #5c6bc0, #2da0a8);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Profile Section */
+#profile {
+  display: none; /* JS will change to flex */
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile Icon Button */
+#icon-btn {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+#icon-btn img {
+  border-radius: 50%;
+}
+
+/* Username */
+#userName {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1605600659873-d808a13e4c04') center/cover;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+  animation: fadeUp 1s ease;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  max-width: 500px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.search-box input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  background: linear-gradient(to right, #5c6bc0, #2da0a8);
+  border: none;
+  color: white;
+  padding: 0 25px;
+  cursor: pointer;
+}
+
+/* Detect button */
+.detect-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #2da0a8;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.detect-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 70px 8%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+/* ================= CARDS ================= */
+.how-grid,
+.services-grid,
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Glass cards */
+.how-card,
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.how-card:hover,
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Service cards */
+.service-card {
+  background: linear-gradient(to right, #5c6bc0, #2da0a8);
+  color: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+/* ================= MAP ================= */
+#map {
+  height: 450px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= CARD BUTTON ================= */
+.card button {
+  background: #2da0a8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #5c6bc0;
+}
+
+/* ================= EMERGENCY ================= */
+.emergency-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.emergency-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

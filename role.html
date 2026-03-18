@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Role</title>
+  <link rel="stylesheet" href="role.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Select Your Role</h1>
+
+    <div class="card-container">
+      <div class="card" onclick="selectRole('user')">
+        <h2>👤 User</h2>
+        <p>Book services & find mechanics</p>
+      </div>
+
+      <div class="card" onclick="selectRole('mechanic')">
+        <h2>🔧 Mechanic</h2>
+        <p>Provide services & earn</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectRole(role){
+  localStorage.setItem("selectedRole", role);
+
+  if(role === "mechanic"){
+    window.location.href = "mechanic_login.html";
+  } else {
+    window.location.href = "login.html";
+  }
+}
+  </script>
+</body>
+</html>

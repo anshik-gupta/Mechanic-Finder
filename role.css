@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* BACKGROUND */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  overflow: hidden;
+}
+
+/* 🔥 animated grid effect */
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px,
+    transparent 40px
+  ),
+  repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px,
+    transparent 40px
+  );
+  animation: moveGrid 20s linear infinite;
+}
+
+@keyframes moveGrid {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-50px, -50px); }
+}
+
+/* container */
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+/* cards */
+.card-container {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  width: 250px;
+  padding: 30px;
+  border-radius: 20px;
+
+  /* glass effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  opacity: 0.8;
+}
